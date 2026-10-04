@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t suraj23j/project-1 .'
+                sh 'docker build -t suraj23j/project-2 .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name c23 -p 9023:8080 suraj23j/project-1
+                docker run -it -d --name c23 -p 9023:8080 suraj23j/project-2
                 '''
             }
         }
@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push suraj23j/project-1'
+                sh 'docker push suraj23j/project-2'
             }
         }
         
