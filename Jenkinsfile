@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Git-checkout'){
             steps{
-                git branch: 'master' , url: 'https://github.com/swathis10/web-application.git'
+                git branch: 'master' , url: 'https://github.com/surajml2319-eng/DevopsTomcatserver.git'
             }
         }
         stage('Code Compile'){
